@@ -1,0 +1,10 @@
+
+
+.users-list {
+    min-height: calc(100vh - 60px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+}
+
