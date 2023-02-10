@@ -1,0 +1,17 @@
+
+.navbar {
+    height: 60px;
+    background: purple;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    width: 200px;
+    justify-content: space-between;
+}
