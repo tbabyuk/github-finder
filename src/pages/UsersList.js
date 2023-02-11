@@ -11,6 +11,8 @@ function UsersList() {
     const [searchQuery, setSearchQuery] = useState("")
 
 
+
+
     if(searchQuery) {
         console.log("here:", searchQuery)
     }
@@ -19,14 +21,13 @@ function UsersList() {
     useEffect(() => {
         const fetchUsers = async () => {
             try {
-                const res = await fetch(`https://api.github.com/search/users?q=${searchQuery}`)
+                const res = await fetch(`https://api.github.com/search/users?q=${searchQuery}&?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`);
                 const data = await res.json()
                 setUsers(data.items)
             } catch(error) {
                     console.log(error.message)
             }
         }
-
         fetchUsers()
     }, [searchQuery])
 
@@ -34,7 +35,7 @@ function UsersList() {
     <>
         <SearchBar setSearchQuery={setSearchQuery} />
 
-        <div className="container text-center mt-5 d-grid users-list">
+        <div className="container text-center mt-5 users-list">
             {users && 
                 users.map((user) => {
                     return <UserCard key={user.id} user={user}/>

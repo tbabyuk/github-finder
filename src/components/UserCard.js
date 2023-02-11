@@ -1,20 +1,28 @@
 // styles
 import "./UserCard.css"
 
-import React from 'react'
+import { useNavigate } from "react-router-dom"
+
 
 function UserCard({user}) {
+
+    const navigate = useNavigate()
+
+    const handleClick = (login) => {
+        navigate(`/user/${login}`)
+    }
+
   return (
-        <div className="card mb-3" style={{maxWidth: "280px"}}>
+        <div className="card mb-3" style={{maxWidth: "280px"}} onClick={() => handleClick(user.login)}>
             <div className="row g-0">
                 <div className="col-md-5">
-                <img src={user.avatar_url} className="img-fluid rounded-start" alt="user photo" />
+                <img src={user.avatar_url} className="img-fluid rounded-start" alt="user" />
                 </div>
                 <div className="col-md-7 d-flex align-items-center">
-                    <div className="card-body">
-                        <h5 className="card-title">{user.login}</h5>
+                    <div className="card-body d-flex flex-column justify-content-center">
+                        <p className="card-title fw-bold">{user.login}</p>
                         {/* <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> */}
-                        <a href={user.url} className="card-link">Github Profile</a>
+                        <p href={user.url} className="card-link">View Profile</p>
                     </div>
                 </div>
             </div>
