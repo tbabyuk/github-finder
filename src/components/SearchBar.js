@@ -12,6 +12,7 @@ function SearchBar({setSearchQuery}) {
     const handleSubmit = (e) => {
         e.preventDefault()
         setSearchQuery(query)
+        localStorage.setItem("query", query)
         setQuery("")
     }
 
