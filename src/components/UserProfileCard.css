@@ -1,54 +1,32 @@
 
-
-.profile-container {
-    width: 80%;
-    height: 350px;
-    margin: 0 auto;
-    display: flex;
-    border-radius: 10px;
-    overflow: hidden;
+.profile-card .card-title {
+    font-size: 2.2rem;
 }
 
-.profile-container img {
-    max-height: 100%;
-}
-
-.profile-info {
-    background: whitesmoke;
+.profile-card .card-body {
+    background: #dadada;
     height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-.profile-info > div {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 
-.user-login {
-    grid-column: 1/7;
+.profile-card .card-body > div
+{
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.user-location {
-    grid-column: 1/4;
+
+.profile-card .card-text {
+    font-size: 1.2rem;
 }
 
-.user-website {
-    grid-column: 4/7;
+.profile-card .card:hover {
+    cursor: pointer;
+    transform: none;
 }
 
-.user-followers {
-    grid-column: 1/3;
-}
 
-.user-following {
-    grid-column: 3/5;
-}
-.user-repos {
-    grid-column: 5/7;
-}
 

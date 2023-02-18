@@ -7,9 +7,9 @@ import { BsGithub } from "react-icons/bs";
 
 function Navbar() {
   return (
-      <nav class="navigation">
+      <nav className="navigation">
           <div className="nav-content-container">
-              <div><BsGithub />&nbsp;&nbsp;&nbsp;Github Finder</div>
+              <Link to="/"><BsGithub />&nbsp;&nbsp;&nbsp;Github Finder</Link>
               <Link to="/">Home</Link>
           </div>
       </nav>

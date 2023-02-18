@@ -4,8 +4,6 @@ import {useState, useEffect} from "react"
 
 export const useFetch = (url) => {
 
-    console.log("useFetch has fired what!")
-
     const [data, setData] = useState(null)
     const [isPending, setIsPending] = useState(false)
     const [error, setError] = useState(null)
@@ -18,7 +16,6 @@ export const useFetch = (url) => {
             try {
                 const res = await fetch(url)
                 const users = await res.json()
-
                 setIsPending(false)
                 setData(users.items)
                 setError(null)

@@ -5,8 +5,6 @@ import UserProfilePage from './pages/userprofilepage/UserProfilePage';
 
 function App() {
 
-  console.log("Logging:", process.env.REACT_APP_GITHUB_CLIENT_SECRET)
-
   return (
     <div className="App">
       <BrowserRouter>
