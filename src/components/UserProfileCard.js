@@ -21,7 +21,7 @@ function UserProfileCard({user}) {
               </div>
               <div className="second-row">
                 <p className="card-text m-0"><HiLocationMarker />&nbsp;&nbsp;Location: {user.location ? user.location : "not specified"}</p>
-                <p className="card-text m-0"><BsGithub />&nbsp;&nbsp;<a href={user.html_url} target_blank>Github Url</a></p>
+                <p className="card-text m-0"><BsGithub />&nbsp;&nbsp;<a href={user.html_url} target="_blank">Github Url</a></p>
               </div>
               <div className="third-row">
                 <p className="card-text m-0"><BsPeopleFill />&nbsp;&nbsp;Followers: {user.followers}</p>
@@ -33,17 +33,6 @@ function UserProfileCard({user}) {
         </div>
       </div>
     </div>
-    // <div className="profile-container bg-primary">
-    //     <div className="profile-image"><img src={user.avatar_url} /></div>
-    //     <div className="profile-info">
-    //         <div className="user-login"><BsPersonCircle />&nbsp;&nbsp;{user.login}</div>
-    //         <div className="user-location"><HiLocationMarker />&nbsp;&nbsp;Location: {user.location ? user.location : "not specified"}</div>
-    //         <div className="user-website"><BsGithub />&nbsp;&nbsp;Github Url</div>
-    //         <div className="user-followers"><BsPeopleFill />&nbsp;&nbsp;Followers: {user.followers}</div>
-    //         <div className="user-following"><BsPeopleFill />&nbsp;&nbsp;Following: {user.following}</div>
-    //         <div className="user-repos"><MdWork />&nbsp;&nbsp;Repos: {user.public_repos}</div>
-    //     </div>
-    // </div>
   )
 }
 

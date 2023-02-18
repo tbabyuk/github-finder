@@ -11,21 +11,28 @@
     justify-content: space-evenly;
 }
 
-
 .profile-card .card-body > div
 {
     display: flex;
     justify-content: space-evenly;
 }
 
-
 .profile-card .card-text {
     font-size: 1.2rem;
 }
 
 .profile-card .card:hover {
-    cursor: pointer;
+    cursor: auto;
     transform: none;
+}
+
+/* styling for small screens */
+@media screen and (max-width: 768px) {
+    .profile-card .card-body > div
+    {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 

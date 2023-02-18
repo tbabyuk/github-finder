@@ -1,44 +1,31 @@
 // import styles
 import "./UserProfilePage.css"
 
-
-import { useParams, Link } from "react-router-dom"
-import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
 import UserProfileCard from "../../components/UserProfileCard"
+import { useFetchUser } from "../../hooks/useFetchUser"
+
+
 
 function UserProfilePage() {
 
   const {nickname} = useParams()
 
-  const [user, setUser] = useState({})
-
-
-  useEffect(() => {
-    console.log("useEffect fired in UserProfilePage")
-    const fetchUsers = async () => {
-        try {
-            const res = await fetch(`https://api.github.com/users/${nickname}`);
-            const data = await res.json()
-            console.log(data)
-            setUser(data)
-        } catch(error) {
-            console.log(error.message)
-        }
-    }
-    fetchUsers()
-}, [])
+  const { data: user, isPending, error} = useFetchUser(`https://api.github.com/users/${nickname}`)
 
 
 
-return (
-  <div className="container text-center mt-5">
-    <div className="row">
-      <div className="col">
-        {user && <UserProfileCard user={user} />}
+  return (
+    <div className="container text-center mt-5">
+      <div className="row">
+        <div className="col">
+          {isPending && (<p>Loading...</p>)}
+          {error && <p>{error}</p>}
+          {user && <UserProfileCard user={user} />}
+        </div>
       </div>
     </div>
-  </div>
-  )
-}
+    )
+  }
 
 export default UserProfilePage

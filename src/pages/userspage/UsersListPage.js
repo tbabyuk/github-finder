@@ -1,11 +1,10 @@
 // import styles
 import "./UsersListPage.css"
 
-
-import UserCard from "../../components/UserCard"
-import { useEffect, useState } from "react"
 import SearchBar from "../../components/SearchBar"
-import { useFetch } from "../../hooks/useFetch"
+import UserCard from "../../components/UserCard"
+import { useState } from "react"
+import { useFetchUsers } from "../../hooks/useFetchUsers"
 
 
 function UsersListPage() {
@@ -14,9 +13,7 @@ function UsersListPage() {
 
     const pastQuery = localStorage.getItem("query")
 
-
-
-    const { data, isPending, error} = useFetch(searchQuery ? `https://api.github.com/search/users?q=${searchQuery}` : `https://api.github.com/search/users?q=${pastQuery}` )
+    const { data, isPending, error} = useFetchUsers(searchQuery ? `https://api.github.com/search/users?q=${searchQuery}` : `https://api.github.com/search/users?q=${pastQuery}` )
 
 
 
@@ -26,6 +23,8 @@ function UsersListPage() {
 
         <div className="container text-center mt-5">
             <div className="row">
+                {isPending && <p>Loading...</p>}
+                {error && <p>{error}</p>}
                 {data && 
                     data.map((user) => {
                         return <UserCard key={user.id} user={user}/>

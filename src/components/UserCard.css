@@ -8,6 +8,7 @@
     margin: 0 auto;
     border: 1px solid white;
     background: #dadada;
+    min-width: 300px;
 }
 
 .card .row,
