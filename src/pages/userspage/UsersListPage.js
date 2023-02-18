@@ -26,7 +26,6 @@ function UsersListPage() {
 
         <div className="container text-center mt-5">
             <div className="row">
-                <p>i am users list page</p>
                 {data && 
                     data.map((user) => {
                         return <UserCard key={user.id} user={user}/>

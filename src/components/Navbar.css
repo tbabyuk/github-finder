@@ -1,17 +1,15 @@
 
-.navbar {
+.navigation {
     height: 60px;
-    background: purple;
+    background: black;
     color: white;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
-.navbar-menu {
+.nav-content-container {
+    width: 85%;
+    margin: 0 auto;
     display: flex;
-    list-style-type: none;
-    padding-left: 0;
-    width: 200px;
     justify-content: space-between;
+    align-items: center;
 }

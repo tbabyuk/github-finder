@@ -1,8 +1,12 @@
 
+.card-container a {
+    text-decoration: none;
+}
+
 .card {
-    box-shadow: 2px 2px 5px gray;
     overflow: hidden;
     margin: 0 auto;
+    border: 1px solid white;
 }
 
 .card .row,
