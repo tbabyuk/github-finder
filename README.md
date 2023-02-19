@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Github Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+See it live: [Github Finder](https://jocular-cajeta-526f29.netlify.app/)
 
-## Available Scripts
+## Description
+A small web-app that allows a user to search for different Github profiles by name. The API returns 30 of the most popular profiles that fit the search query, and a user can then click on any one of these to view more detailed information on that particular user.
 
-In the project directory, you can run:
+## Background & Motivation
+This was based on a tutorial I had done a while back by a popular YouTube coding instructor. This time, however, I did completely my own implementation and gave it my own look and styling. I really like the idea of getting a list of information through an API and displaying it neatly on a page.
 
-### `npm start`
+## Technologies
+The current version of this project was done with:
+* HTML, Bootstrap / CSS
+* React
+* Fetch API
+* Custom fetch hook
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## State of Completion
+Completed. I could have added more information to the individual user profile but my goal was to keep it simple, with a focus on functionality first and foremost.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Learning Lessons & Challenges
+### Using a custom hook for Fetching data
+I used to always fetch data inside components, but recently saw a video where the instructor shows how to do this a bit neater, with a custom fetch hook. So I decided to implement this for this particular project. This was great practice for me and I feel like I will be using custom fetch hooks more often going forward, as it keeps the component code cleaner by taking all the fetch logic outside of it.
 
-### `npm test`
+### Displaying the list of Github profiles
+I enjoyed the challenge of figuring out how to neatly display the fetched profile data and at the same time make it responsive on all types of screen sizes.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Summary
+I really enjoyed making this little app. While it's nothing fancy, I think it has a very clean look and feel to it that I am very pleased with.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
