@@ -2,7 +2,7 @@
 import "./UserProfilePage.css"
 
 import { useParams } from "react-router-dom"
-import UserProfileCard from "../../components/UserProfileCard"
+import UserProfileCard from "../../components/userprofilecard/UserProfileCard"
 import { useFetchUser } from "../../hooks/useFetchUser"
 
 

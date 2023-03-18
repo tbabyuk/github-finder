@@ -1,4 +1,4 @@
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import UsersListPage from './pages/userspage/UsersListPage';
 import UserProfilePage from './pages/userprofilepage/UserProfilePage';

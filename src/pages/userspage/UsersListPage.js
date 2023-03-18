@@ -1,8 +1,8 @@
 // import styles
 import "./UsersListPage.css"
 
-import SearchBar from "../../components/SearchBar"
-import UserCard from "../../components/UserCard"
+import SearchBar from "../../components/searchbar/SearchBar"
+import UserCard from "../../components/usercard/UserCard"
 import { useState } from "react"
 import { useFetchUsers } from "../../hooks/useFetchUsers"
 
@@ -22,7 +22,7 @@ function UsersListPage() {
         <SearchBar setSearchQuery={setSearchQuery} />
 
         <div className="container text-center mt-5">
-            <div className="row">
+            <div className="cards-container">
                 {isPending && <p>Loading...</p>}
                 {error && <p>{error}</p>}
                 {data && 
