@@ -20,6 +20,7 @@ export const useFetchUser = (url) => {
                 setIsPending(false)
                 setData(user)
                 setError(null)
+                
             } catch(err) {
                 setIsPending(false)
                 setError("could not fetch data")

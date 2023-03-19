@@ -1,5 +1,4 @@
 // import styles
-
 import styles from "./UserProfilePage.module.css"
 
 import { useParams } from "react-router-dom"
@@ -34,7 +33,7 @@ function UserProfilePage() {
                 <UserProfileCard user={user} />
               </>
           }
-        </div>
+      </div>
     )
   }
 

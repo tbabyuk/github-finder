@@ -10,7 +10,7 @@ function UsersListPage() {
 
     const pastQuery = localStorage.getItem("query")
 
-    const { data, isPending, error} = useFetchUsers(searchQuery ? `https://api.github.com/search/users?q=${searchQuery}` : `https://api.github.com/search/users?q=${pastQuery}` )
+    const {data, isPending, error} = useFetchUsers(searchQuery ? `https://api.github.com/search/users?q=${searchQuery}` : `https://api.github.com/search/users?q=${pastQuery}` )
 
 
 

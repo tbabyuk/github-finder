@@ -4,11 +4,11 @@ import styles from "./UserProfileCard.module.css"
 import {BsPersonCircle, BsPeopleFill, BsGithub} from "react-icons/bs"
 import {MdWork} from "react-icons/md"
 import {HiLocationMarker} from "react-icons/hi"
-import { Fragment } from "react"
+
 
 function UserProfileCard({user}) {
+  
   return (
-
     <div className={styles["user-profile-card"]}>
       <div className={styles["card-image"]}>
           <img src={user.avatar_url} className="" alt="user" />
