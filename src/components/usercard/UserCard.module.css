@@ -28,8 +28,13 @@ a {
     background: #dadada;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
     color: black;
+}
+
+.user-name {
+    font-weight: bold;
 }
 
 .user-card:hover {

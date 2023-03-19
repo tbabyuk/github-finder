@@ -1,6 +1,5 @@
 // import styles
-
-import "./SearchBar.css"
+import styles from "./SearchBar.module.css"
 
 import { useState } from 'react'
 
@@ -19,7 +18,7 @@ function SearchBar({setSearchQuery}) {
 
   return (
 
-    <div className="container text-center mt-5 search-bar">
+    <div className={styles["search-bar"]}>
         <form onSubmit={handleSubmit}>
             <input
                 placeholder="search github user" 
