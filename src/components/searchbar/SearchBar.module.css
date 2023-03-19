@@ -1,8 +1,8 @@
 
 .search-bar {
+    width: 90%;
     height: 42px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px auto 80px auto;
 }
 
 .search-bar form {
@@ -27,12 +27,21 @@
     width: 200px;
     font-size: 1.1rem;
     border: 1px solid black;
+    cursor: pointer;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
-    cursor: pointer;
 }
 
 .search-bar button:hover {
     background: #dadada;
 }
 
+
+
+@media screen and (max-width: 992px) {
+
+    .search-bar form {
+        width: 95%;
+    }
+
+}

@@ -21,6 +21,7 @@ function SearchBar({setSearchQuery}) {
     <div className={styles["search-bar"]}>
         <form onSubmit={handleSubmit}>
             <input
+                type="text"
                 placeholder="search github user" 
                 onChange={(e) => setQuery(e.target.value)}
                 value={query}

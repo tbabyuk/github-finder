@@ -1,8 +1,8 @@
 
 .user-profile-card {
+    max-width: 700px;
     display: grid;
     grid-template-columns: 2fr 3fr;
-    width: 700px;
 }
 
 a {
@@ -35,3 +35,33 @@ a {
 .user-name {
     font-weight: bold;
 }
+
+
+
+@media screen and (max-width: 576px) {
+
+    .user-profile-card {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 80%;
+    }
+
+    .card-image img {
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0px;
+    }
+    
+    .card-info {
+        height: 300px;
+        padding: 50px 0;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 8px;
+    }
+    
+    .card-info p {
+        margin-bottom: 20px;
+    }
+
+}
+

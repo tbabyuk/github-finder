@@ -1,9 +1,11 @@
 
 .navbar {
     height: 60px;
+    max-width: 100%;
     background: black;
     color: white;
     display: flex;
+    align-items: center;
 }
 
 .navbar-inner {
@@ -18,4 +20,8 @@
 .navbar-inner a {
     text-decoration: none;
     color: white;
+}
+
+.navbar-inner a:hover {
+    color: #dadada;
 }

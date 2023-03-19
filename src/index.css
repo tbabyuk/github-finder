@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+image {
+  max-width: 100%;
+}
+
 
 body {
   background: rgb(45, 42, 65);
